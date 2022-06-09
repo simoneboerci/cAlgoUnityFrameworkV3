@@ -1,10 +1,18 @@
 ﻿using cAlgo.API;
+
+using cAlgoUnityFrameworkV3.Unity.Data.Account;
 using cAlgoUnityFrameworkV3.Unity.Data.Orders;
 
 namespace cAlgoUnityFrameworkV3.Unity
 {
     public class UnityMasterRobot : IUnityRobot, IUnityLifeCycle
     {
+        #region Public Variables
+
+        public readonly Account Account;
+
+        #endregion
+
         #region Protected Variables
 
         protected readonly UnityToAlgoAdapter UnityToAlgoAdapter;
@@ -13,7 +21,12 @@ namespace cAlgoUnityFrameworkV3.Unity
 
         #region Public Methods
 
-        public UnityMasterRobot(UnityToAlgoAdapter unityToAlgoAdapter) => UnityToAlgoAdapter = unityToAlgoAdapter;
+        public UnityMasterRobot(Account account, UnityToAlgoAdapter unityToAlgoAdapter)
+        {
+            Account = account;
+
+            UnityToAlgoAdapter = unityToAlgoAdapter;
+        }
 
         #region Robot
 

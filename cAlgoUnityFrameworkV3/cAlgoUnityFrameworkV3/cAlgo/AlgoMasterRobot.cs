@@ -16,7 +16,7 @@ namespace cAlgoUnityFrameworkV3.cAlgo
 
         #region Public Methods
 
-        public AlgoMasterRobot() => AlgoToUnityAdapter = new(new UnityMasterRobot(new UnityToAlgoAdapter(this)));
+        public AlgoMasterRobot() => AlgoToUnityAdapter = new(new UnityMasterRobot(new Unity.Data.Account.Account(Account.Balance), new UnityToAlgoAdapter(this)));
 
         #endregion
 
