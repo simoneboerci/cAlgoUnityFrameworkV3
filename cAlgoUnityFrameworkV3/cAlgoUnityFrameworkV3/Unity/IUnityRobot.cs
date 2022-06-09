@@ -1,6 +1,6 @@
 ﻿namespace cAlgoUnityFrameworkV3.Unity
 {
-    public interface IUnityRobot
+    public interface IUnityRobot : IRequestOrders
     {
         #region Public Methods
 

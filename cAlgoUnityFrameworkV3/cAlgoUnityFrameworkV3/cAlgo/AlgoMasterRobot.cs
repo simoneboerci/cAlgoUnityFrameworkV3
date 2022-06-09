@@ -8,7 +8,7 @@ namespace cAlgoUnityFrameworkV3.cAlgo
     {
         #region Protected Variables
 
-        protected AlgoToUnityAdapter AlgoToUnityAdapter { get; private set; }
+        protected readonly AlgoToUnityAdapter AlgoToUnityAdapter;
 
         #endregion
 
@@ -16,7 +16,7 @@ namespace cAlgoUnityFrameworkV3.cAlgo
 
         #region Public Methods
 
-        public AlgoMasterRobot() => AlgoToUnityAdapter = new(new UnityMasterRobot());
+        public AlgoMasterRobot() => AlgoToUnityAdapter = new(new UnityMasterRobot(new UnityToAlgoAdapter(this)));
 
         #endregion
 
