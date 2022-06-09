@@ -8,7 +8,7 @@ namespace cAlgoUnityFrameworkV3.Test
 
         protected override void Main()
         {
-            throw new NotImplementedException();
+            Stop();
         }
 
         #endregion
